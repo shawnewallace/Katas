@@ -1,17 +1,38 @@
 class OneWayList
   
+  #@items = Array.new
+  
   def initialize()
-    @item = nil
+    @items = Array.new
   end
   
   def find(toFind)
-    @item
+    
+    @items.each do |val|
+      return val if val.value == toFind
+    end
+    
+    nil
   end
   
   def add(toAdd)
-    @item = OneWayListItem.new if @item == nil
+    #@item = OneWayListItem.new if @item == nil
+    newItem = OneWayListItem.new
+    newItem.value = toAdd
+    @items.push(newItem)  
+  end
+  
+  def delete(itemToDelete)
+    @items.delete(itemToDelete)
+  end
+  
+  def values()
+    array = Array.new
+    @items.each do |val|
+      array.push(val.value)
+    end
     
-    @item.value = toAdd
+    array
   end
 end
 
