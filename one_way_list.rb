@@ -1,6 +1,6 @@
 class OneWayList
   
-  #@items = Array.new
+  attr_accessor :last
   
   def initialize()
     @items = Array.new
@@ -20,6 +20,7 @@ class OneWayList
     newItem = OneWayListItem.new
     newItem.value = toAdd
     @items.push(newItem)  
+    last = newItem
   end
   
   def delete(itemToDelete)
@@ -38,4 +39,5 @@ end
 
 class OneWayListItem
   attr_accessor :value
+  attr_accessor :next
 end
