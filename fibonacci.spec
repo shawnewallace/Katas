@@ -29,9 +29,9 @@ describe Fibonacci do
     [83, 99194853094755497]
     ].each do |fib, expected|
     it "should be #{expected} if #{fib}" do
- #     Fibonacci.ofIterative(fib).should == expected
- #     Fibonacci.ofRecursion(fib).should == expected
-     Fibonacci.of(fib).should == expected
+      #Fibonacci.ofIterative(fib).should == expected
+      #Fibonacci.ofRecursion(fib).should == expected
+      Fibonacci.of(fib).should == expected
     end
   end
   
