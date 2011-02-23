@@ -14,12 +14,10 @@ When /^I score it$/ do
 end
 
 Then /^My score should be (\d+)$/ do |expected|
-  
-
   @score.should eq(Integer(expected))
 end
 
 Given /^I make the following rolls:$/ do |table|
-  table.hashes.each {|roll| @game.Roll(roll[:roll])}
+  table.hashes.each {|roll| @game.Roll(Integer(roll[:roll]))}
 end
 

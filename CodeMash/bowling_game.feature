@@ -18,6 +18,7 @@ Feature:  Bowling Game
 
   Scenario:  2 rolls
     Given I make the following rolls:
+      | roll |
       | 6    |
       | 3    |
     When I score it
@@ -25,6 +26,7 @@ Feature:  Bowling Game
 
   Scenario:  with no spares or strikes
     Given I make the following rolls:
+      | roll |
       | 1    |
       | 4    |
       | 4    |
@@ -34,6 +36,7 @@ Feature:  Bowling Game
 
   Scenario:  with spares and strikes
     Given I make the following rolls:
+      | roll |
       | 1    |
       | 4    |
       | 4    |
@@ -58,6 +61,7 @@ Feature:  Bowling Game
 
   Scenario:  a perfect game
     Given I make the following rolls:
+      | roll |
       | 10   |
       | 10   |
       | 10   |
