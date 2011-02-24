@@ -59,13 +59,13 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("0 Rolls", ((string[])(null)));
 #line 7
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.Given("I make no rolls");
+  testRunner.Given("I make no rolls");
 #line 9
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 10
-    testRunner.Then("My score should be 0");
+  testRunner.Then("My score should be 0");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -76,18 +76,18 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 roll", ((string[])(null)));
 #line 12
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "roll"});
             table1.AddRow(new string[] {
                         "2"});
 #line 13
-    testRunner.Given("I make the following rolls:", ((string)(null)), table1);
+  testRunner.Given("I make the following rolls:", ((string)(null)), table1);
 #line 16
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 17
-    testRunner.Then("My score should be 2");
+  testRunner.Then("My score should be 2");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -98,7 +98,7 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 rolls", ((string[])(null)));
 #line 19
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "roll"});
@@ -107,11 +107,11 @@ namespace BowlingGameLib.Features
             table2.AddRow(new string[] {
                         "3"});
 #line 20
-    testRunner.Given("I make the following rolls:", ((string)(null)), table2);
+  testRunner.Given("I make the following rolls:", ((string)(null)), table2);
 #line 24
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 25
-    testRunner.Then("My score should be 9");
+  testRunner.Then("My score should be 9");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -122,7 +122,7 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("with no spares or strikes", ((string[])(null)));
 #line 27
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "roll"});
@@ -135,11 +135,11 @@ namespace BowlingGameLib.Features
             table3.AddRow(new string[] {
                         "5"});
 #line 28
-    testRunner.Given("I make the following rolls:", ((string)(null)), table3);
+  testRunner.Given("I make the following rolls:", ((string)(null)), table3);
 #line 34
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 35
-    testRunner.Then("My score should be 14");
+  testRunner.Then("My score should be 14");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -150,7 +150,7 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("with spares and strikes", ((string[])(null)));
 #line 37
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "roll"});
@@ -193,11 +193,11 @@ namespace BowlingGameLib.Features
             table4.AddRow(new string[] {
                         "6"});
 #line 38
-    testRunner.Given("I make the following rolls:", ((string)(null)), table4);
+  testRunner.Given("I make the following rolls:", ((string)(null)), table4);
 #line 59
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 60
-    testRunner.Then("My score should be 133");
+  testRunner.Then("My score should be 133");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
@@ -208,7 +208,7 @@ namespace BowlingGameLib.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("a perfect game", ((string[])(null)));
 #line 62
-  this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "roll"});
@@ -237,11 +237,28 @@ namespace BowlingGameLib.Features
             table5.AddRow(new string[] {
                         "10"});
 #line 63
-    testRunner.Given("I make the following rolls:", ((string)(null)), table5);
+  testRunner.Given("I make the following rolls:", ((string)(null)), table5);
 #line 77
-    testRunner.When("I score it");
+  testRunner.When("I score it");
 #line 78
-    testRunner.Then("My score should be 300");
+  testRunner.Then("My score should be 300");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("another perfect game")]
+        public virtual void AnotherPerfectGame()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("another perfect game", ((string[])(null)));
+#line 80
+ this.ScenarioSetup(scenarioInfo);
+#line 81
+  testRunner.Given("I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10");
+#line 82
+  testRunner.When("I score it");
+#line 83
+  testRunner.Then("My score should be 300");
 #line hidden
             testRunner.CollectScenarioErrors();
         }

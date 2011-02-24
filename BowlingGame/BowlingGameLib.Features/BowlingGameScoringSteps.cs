@@ -34,6 +34,16 @@ namespace BowlingGameLib.Features
             }
         }
 
+				[Given(@"I make the following rolls:(.*)")]
+				public void GivenIMakeTheFollowingRolls(string rolls)
+				{
+					var table = rolls.Trim().Split(',');
+					foreach (var row in table)
+					{
+						_game.Roll(int.Parse(row));
+					}
+				}
+
         [When(@"I score it")]
         public void WhenIScoreIt()
         {
