@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGameLib", "BowlingGameLib\BowlingGameLib.csproj", "{ABB4BD03-FD88-436C-843A-C2513CE2AB78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGameLib.Tests.Unit", "BowlingGameLib.Tests.Unit\BowlingGameLib.Tests.Unit.csproj", "{7AD4B6A2-0F4C-45D9-9387-A8FF58764B33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BowlingGameLib.Features", "BowlingGameLib.Features\BowlingGameLib.Features.csproj", "{E2BC691A-C7EF-484C-8A1A-367F7C883128}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABB4BD03-FD88-436C-843A-C2513CE2AB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB4BD03-FD88-436C-843A-C2513CE2AB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB4BD03-FD88-436C-843A-C2513CE2AB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB4BD03-FD88-436C-843A-C2513CE2AB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD4B6A2-0F4C-45D9-9387-A8FF58764B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD4B6A2-0F4C-45D9-9387-A8FF58764B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD4B6A2-0F4C-45D9-9387-A8FF58764B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD4B6A2-0F4C-45D9-9387-A8FF58764B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BC691A-C7EF-484C-8A1A-367F7C883128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BC691A-C7EF-484C-8A1A-367F7C883128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BC691A-C7EF-484C-8A1A-367F7C883128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BC691A-C7EF-484C-8A1A-367F7C883128}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
