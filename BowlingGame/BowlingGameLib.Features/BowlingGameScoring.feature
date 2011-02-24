@@ -5,37 +5,33 @@
 	I want to have my game scored
 
 	Scenario: 0 Rolls
-		Given I make no rolls
-		When I score it
+		Given A new game
+		When I make no rolls
 		Then My score should be 0
 
 	Scenario: 1 roll
-		Given I make the following rolls:
-		| roll |
-		| 2    |
-		When I score it
+		Given A new game
+		When I make the following rolls: 2
 		Then My score should be 2
 
 	Scenario:  2 rolls
-		Given I make the following rolls:
-		| roll |
-		| 6    |
-		| 3    |
-		When I score it
+		Given A new game
+		When I make the following rolls: 6, 3
 		Then My score should be 9
 
 	Scenario:  with no spares or strikes
-		Given I make the following rolls:
-		| roll |
-		| 1    |
-		| 4    |
-		| 4    |
-		| 5    |
-		When I score it
+		Given A new game
+		When I make the following rolls: 1, 4, 4, 5
 		Then My score should be 14
 
+	Scenario:  a perfect game
+		Given A new game
+		When I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
+		Then My score should be 300
+
 	Scenario:  with spares and strikes
-		Given I make the following rolls:
+		Given A new game
+		When I make the following rolls:
 		| roll |
 		| 1    |
 		| 4    |
@@ -56,11 +52,11 @@
 		| 2    |
 		| 8    |
 		| 6    |
-		When I score it
 		Then My score should be 133
 
-	Scenario:  a perfect game
-		Given I make the following rolls:
+	Scenario:  aother perfect game
+		Given A new game
+		When I make the following rolls:
 		| roll |
 		| 10   |
 		| 10   |
@@ -74,10 +70,6 @@
 		| 10   |
 		| 10   |
 		| 10   |
-		When I score it
 		Then My score should be 300
 
-	Scenario:  another perfect game
-		Given I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
-		When I score it
-		Then My score should be 300
+	

@@ -7,54 +7,46 @@ using TechTalk.SpecFlow;
 
 namespace BowlingGameLib.Features
 {
-    [Binding]
-    public class BowlingGameScoringSteps
-    {
-        private BowlingGame _game;
-        private int _score;
+	[Binding]
+	public class BowlingGameScoringSteps
+	{
+		private BowlingGame _game;
+		
+		[Given(@"A new game")]
+		public void ANewGame()
+		{
+			_game = new BowlingGame();
+		}
 
-        [BeforeScenario()]
-        public void Before()
-        {
-            _game = new BowlingGame();
-            _score = 0;
-        }
+		[When(@"I make no rolls")]
+		public void GivenIMakeNoRolls()
+		{
+		}
 
-        [Given(@"I make no rolls")]
-        public void GivenIMakeNoRolls()
-        {
-        }
+		[When(@"I make the following rolls:")]
+		public void GivenIMakeTheFollowingRolls(Table table)
+		{
+			foreach (var row in table.Rows)
+			{
+				_game.Roll(int.Parse(row["roll"]));
+			}
+		}
 
-        [Given(@"I make the following rolls:")]
-        public void GivenIMakeTheFollowingRolls(Table table)
-        {
-            foreach(var row in table.Rows)
-            {
-                _game.Roll(int.Parse(row["roll"]));
-            }
-        }
+		[When(@"I make the following rolls:(.*)")]
+		public void GivenIMakeTheFollowingRolls(string rolls)
+		{
+			var table = rolls.Trim().Split(',');
+			foreach (var row in table)
+			{
+				_game.Roll(int.Parse(row));
+			}
+		}
 
-				[Given(@"I make the following rolls:(.*)")]
-				public void GivenIMakeTheFollowingRolls(string rolls)
-				{
-					var table = rolls.Trim().Split(',');
-					foreach (var row in table)
-					{
-						_game.Roll(int.Parse(row));
-					}
-				}
+		[Then(@"My score should be (\d+)")]
+		public void ThenMyScoreShouldBe(int score)
+		{
+			Assert.That(_game.Score() == score);
+		}
 
-        [When(@"I score it")]
-        public void WhenIScoreIt()
-        {
-            _score = _game.Score();
-        }
-
-        [Then(@"My score should be (\d+)")]
-        public void ThenMyScoreShouldBe(int score)
-        {
-            Assert.That(_score == score);
-        }
-
-    }
+	}
 }
