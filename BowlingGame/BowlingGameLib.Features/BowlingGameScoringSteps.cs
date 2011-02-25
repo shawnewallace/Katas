@@ -17,12 +17,7 @@ namespace BowlingGameLib.Features
 		{
 			_game = new BowlingGame();
 		}
-
-		[When(@"I make no rolls")]
-		public void GivenIMakeNoRolls()
-		{
-		}
-
+		
 		[When(@"I make the following rolls:")]
 		public void GivenIMakeTheFollowingRolls(Table table)
 		{

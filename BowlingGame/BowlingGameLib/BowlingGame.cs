@@ -33,7 +33,6 @@ namespace BowlingGameLib
             return OpenScoreFor(frame);
         }
 
-        //private
 
         private int SpareScoreFor(int frame)
         {
@@ -57,14 +56,6 @@ namespace BowlingGameLib
 
         private int StrikeScoreFor(int frame)
         {
-            //score = open_score_for(frame) + open_score_for(next_frame(frame))
-    
-            //if is_strike_at? next_frame(frame)
-            //  score += first_throw_for(next_frame(next_frame(frame)))
-            //end
-
-            //score
-
             var score = OpenScoreFor(frame) + OpenScoreFor(NextFrame(frame));
             if(IsStrikeAt(NextFrame(frame)))
             {
