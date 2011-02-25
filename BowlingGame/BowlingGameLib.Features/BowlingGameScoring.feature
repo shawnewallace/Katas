@@ -36,15 +36,7 @@
 		When I make the following rolls: 6, 3
 		Then My score should be 9
 
-	Scenario:  with no spares or strikes
-		Given A new game
-		When I make the following rolls: 1, 4, 4, 5
-		Then My score should be 14
-
-	Scenario:  a perfect game
-		Given A new game
-		When I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
-		Then My score should be 300
+	
 		
 	
 	

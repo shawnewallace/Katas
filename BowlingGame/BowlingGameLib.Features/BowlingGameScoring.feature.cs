@@ -119,40 +119,6 @@ tenth frame.", GenerationTargetLanguage.CSharp, ((string[])(null)));
 #line hidden
             testRunner.CollectScenarioErrors();
         }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("with no spares or strikes")]
-        public virtual void WithNoSparesOrStrikes()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("with no spares or strikes", ((string[])(null)));
-#line 39
- this.ScenarioSetup(scenarioInfo);
-#line 40
-  testRunner.Given("A new game");
-#line 41
-  testRunner.When("I make the following rolls: 1, 4, 4, 5");
-#line 42
-  testRunner.Then("My score should be 14");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("a perfect game")]
-        public virtual void APerfectGame()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("a perfect game", ((string[])(null)));
-#line 44
- this.ScenarioSetup(scenarioInfo);
-#line 45
-  testRunner.Given("A new game");
-#line 46
-  testRunner.When("I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10");
-#line 47
-  testRunner.Then("My score should be 300");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
     }
 }
 #endregion
