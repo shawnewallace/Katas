@@ -18,15 +18,6 @@ namespace BowlingGameLib.Features
 			_game = new BowlingGame();
 		}
 		
-		[When(@"I make the following rolls:")]
-		public void GivenIMakeTheFollowingRolls(Table table)
-		{
-			foreach (var row in table.Rows)
-			{
-				_game.Roll(int.Parse(row["roll"]));
-			}
-		}
-
 		[When(@"I make the following rolls:(.*)")]
 		public void GivenIMakeTheFollowingRolls(string rolls)
 		{

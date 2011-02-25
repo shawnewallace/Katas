@@ -21,6 +21,7 @@
 	balls to complete the frame.  However no more than three balls can be rolled in
 	tenth frame.
 
+
 	Scenario: 0 Rolls
 		Given A new game
 		Then My score should be 0
@@ -44,50 +45,8 @@
 		Given A new game
 		When I make the following rolls: 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10
 		Then My score should be 300
-
-	Scenario:  another perfect game
-		Given A new game
-		When I make the following rolls:
-		| roll |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		| 10   |
-		Then My score should be 300
-
-	Scenario:  with spares and strikes
-		Given A new game
-		When I make the following rolls:
-		| roll |
-		| 1    |
-		| 4    |
-		| 4    |
-		| 5    |
-		| 6    | 
-		| 4    |
-		| 5    |
-		| 5    |
-		| 10   |
-		| 0    |
-		| 1    |
-		| 7    |
-		| 3    |
-		| 6    |
-		| 4    |
-		| 10   |
-		| 2    |
-		| 8    |
-		| 6    |
-		Then My score should be 133
-
+		
+	
 	
 
 	
