@@ -22,19 +22,8 @@
 	tenth frame.
 
 
-	Scenario: 0 Rolls
-		Given A new game
-		Then My score should be 0
 
-	Scenario: 1 roll
-		Given A new game
-		When I make the following rolls: 2
-		Then My score should be 2
-
-	Scenario:  2 rolls
-		Given A new game
-		When I make the following rolls: 6, 3
-		Then My score should be 9
+	
 
 	
 		

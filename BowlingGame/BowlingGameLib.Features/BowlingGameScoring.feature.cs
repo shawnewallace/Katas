@@ -70,55 +70,6 @@ tenth frame.", GenerationTargetLanguage.CSharp, ((string[])(null)));
         {
             testRunner.OnScenarioEnd();
         }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("0 Rolls")]
-        public virtual void _0Rolls()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("0 Rolls", ((string[])(null)));
-#line 25
- this.ScenarioSetup(scenarioInfo);
-#line 26
-  testRunner.Given("A new game");
-#line 27
-  testRunner.Then("My score should be 0");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("1 roll")]
-        public virtual void _1Roll()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 roll", ((string[])(null)));
-#line 29
- this.ScenarioSetup(scenarioInfo);
-#line 30
-  testRunner.Given("A new game");
-#line 31
-  testRunner.When("I make the following rolls: 2");
-#line 32
-  testRunner.Then("My score should be 2");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("2 rolls")]
-        public virtual void _2Rolls()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 rolls", ((string[])(null)));
-#line 34
- this.ScenarioSetup(scenarioInfo);
-#line 35
-  testRunner.Given("A new game");
-#line 36
-  testRunner.When("I make the following rolls: 6, 3");
-#line 37
-  testRunner.Then("My score should be 9");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
     }
 }
 #endregion
