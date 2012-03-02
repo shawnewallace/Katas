@@ -1,6 +1,6 @@
-require 'rubygems'
-gem 'rspec'
-require 'fizz_buzz'
+#require 'rubygems'
+#gem 'rspec'
+#require 'fizz_buzz'
 
 describe FizzBuzz do
   [

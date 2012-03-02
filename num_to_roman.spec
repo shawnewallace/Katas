@@ -1,5 +1,5 @@
-require 'rubygems'
-gem 'rspec'
+#require 'rubygems'
+#gem 'rspec'
 require 'num_to_roman'
 
 describe NumToRoman do
