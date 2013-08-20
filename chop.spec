@@ -2,6 +2,8 @@ require 'rubygems'
 gem 'rspec'
 require 'chop'
 
+#http://codekata.pragprog.com/2007/01/kata_two_karate.html
+
 describe Chop do
   [
     [-1, 3, []],

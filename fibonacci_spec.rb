@@ -1,6 +1,6 @@
 require 'rubygems'
 gem 'rspec'
-require 'fibonacci'
+require './fibonacci'
 
 describe Fibonacci do
 =begin
