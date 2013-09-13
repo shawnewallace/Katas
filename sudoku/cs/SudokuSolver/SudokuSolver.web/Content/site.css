@@ -1,0 +1,32 @@
+﻿body {
+}
+
+.board { border: 0; }
+
+.boardRow {
+	
+}
+
+.boardCell {
+	
+}
+
+.boardEntry {
+	width: 30px;
+	text-align: center;
+	border: none;
+}
+
+.boardInput {
+	width: 400px;
+}
+
+.unit-A{ background-color: pink; }
+.unit-B{ background-color: red; color: white; }
+.unit-C{ background-color: pink; }
+.unit-D{ background-color: red; color: white; }
+.unit-E{ background-color: pink; }
+.unit-F{ background-color: red; color: white; }
+.unit-G{ background-color: pink; }
+.unit-H{ background-color: red; color: white; }
+.unit-I{ background-color: pink; }

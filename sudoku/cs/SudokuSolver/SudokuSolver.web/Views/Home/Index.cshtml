@@ -1,0 +1,34 @@
+﻿@model SudokuSolver.web.Models.BoardUIModel
+
+@using(Html.BeginForm("Board", "Home", FormMethod.Post)) {
+	<input class="boardInput" type="text" id="input" name="input" maxlength="81"/>
+	<input type="submit" value="Fill"/>
+}
+
+@using (Html.BeginForm("Solve", "Home", FormMethod.Post))
+{
+	<table class="board">
+	
+		@foreach (var i in "ABCDEFGHI")
+		{
+			<tr class="boardRow">
+				@foreach (var j in "123456789")
+				{
+					var cell = string.Format("{0}{1}", i, j);
+					var value = Model.ContainsKey(cell) ? Model[cell] : "";
+					<td class="boardCell unit-@Model.WhichUnit(cell)">
+						<input type="text"
+							class="unit-@Model.WhichUnit(cell) boardEntry"
+							id="values"
+							name="values"
+							maxlength="1"
+							value ="@value" />
+					</td>
+				}
+			</tr>
+		}
+
+	</table>
+
+	<input type="submit" value="Solve"/>
+}
