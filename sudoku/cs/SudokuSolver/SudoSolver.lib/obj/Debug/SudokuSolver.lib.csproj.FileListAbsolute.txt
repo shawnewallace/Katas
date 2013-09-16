@@ -1,5 +1,0 @@
-C:\Users\c-wallas\Desktop\Katas\sudoku\cs\SudokuSolver\SudoSolver.lib\bin\Debug\SudokuSolver.lib.dll
-C:\Users\c-wallas\Desktop\Katas\sudoku\cs\SudokuSolver\SudoSolver.lib\bin\Debug\SudokuSolver.lib.pdb
-C:\Users\c-wallas\Desktop\Katas\sudoku\cs\SudokuSolver\SudoSolver.lib\obj\Debug\SudokuSolver.lib.dll
-C:\Users\c-wallas\Desktop\Katas\sudoku\cs\SudokuSolver\SudoSolver.lib\obj\Debug\SudokuSolver.lib.pdb
-C:\Users\c-wallas\Desktop\Katas\sudoku\cs\SudokuSolver\SudoSolver.lib\obj\Debug\SudokuSolver.lib.csprojResolveAssemblyReference.cache
