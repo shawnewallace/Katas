@@ -1,0 +1,51 @@
+﻿@{
+  ViewBag.Title = "title";
+}
+
+<h2>title</h2>
+
+<input type="text" id="thingToRemember"/>
+<button id="remember">Remember This!</button>
+
+<ul id="theList">
+  
+</ul>
+
+@section scripts
+{
+  <script type="text/javascript">
+    $(document).ready(function () {
+      
+      $('#thingToRemember').keydown(function (event) {
+        if (event.keyCode == 13) {
+          $('#remember').trigger('click');
+        }
+      });
+
+
+      $("#remember").click(function() {
+        var val = $("#thingToRemember").val();
+        var newid = Math.floor((Math.random() * 100) + 1);
+
+        var thingsRemembered = $("#theList li").length;
+       
+        if (thingsRemembered >= 7) {
+          $("#theList li:last-child")
+            .fadeOut("slow")
+            .remove();
+        }
+
+        $("<li id='" + newid + "'>" + val + "</li>")
+          .hide()
+          .prependTo('#theList')
+          .slideDown("slow");
+
+        $("#" + newid)
+          .delay(7000)
+          .fadeOut('slow');
+
+        $("#thingToRemember").val("").focus();
+      });
+    });
+  </script>
+}
