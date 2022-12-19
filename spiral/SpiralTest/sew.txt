@@ -1,0 +1,138 @@
+def fill_array_spirally(arr):
+  # Get the dimensions of the array
+  rows = len(arr)
+  cols = len(arr[0])
+
+  # Initialize the variables to keep track of the current position and direction
+  row = 0
+  col = 0
+  direction = 0  # 0: right, 1: down, 2: left, 3: up
+
+  # Initialize a counter to fill the array
+  counter = 1
+
+  # Keep running the loop until all elements are filled
+  while counter <= rows * cols:
+    # Fill the current element with the counter value
+    arr[row][col] = counter
+    counter += 1
+
+    # Update the position based on the direction
+    if direction == 0:  # moving right
+      col += 1
+      if col >= cols or arr[row][col] != 0:  # check if we reached the end of the row or if the element is already filled
+        col -= 1  # move back to the last element
+        row += 1  # change direction to down
+        direction = 1
+    elif direction == 1:  # moving down
+      row += 1
+      if row >= rows or arr[row][col] != 0:  # check if we reached the last row or if the element is already filled
+        row -= 1  # move back to the last element
+        col -= 1  # change direction to left
+        direction = 2
+    elif direction == 2:  # moving left
+      col -= 1
+      if col < 0 or arr[row][col] != 0:  # check if we reached the first column or if the element is already filled
+        col += 1  # move back to the last element
+        row -= 1  # change direction to up
+        direction = 3
+    elif direction == 3:  # moving up
+      row -= 1
+      if row < 0 or arr[row][col] != 0:  # check if we reached the first row or if the element is already filled
+        row += 1  # move back to the last element
+        col += 1  # change direction to right
+        direction = 0
+
+# Example usage
+arr = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+fill_array_spirally(arr)
+print(arr)  # prints [[1, 2, 3], [8, 9, 4], [7, 6, 5]]
+
+
+
+***************
+
+
+void FillArraySpirally(int[,] arr)
+{
+  // Get the dimensions of the array
+  int rows = arr.GetLength(0);
+  int cols = arr.GetLength(1);
+
+  // Initialize the variables to keep track of the current position and direction
+  int row = 0;
+  int col = 0;
+  int direction = 0;  // 0: right, 1: down, 2: left, 3: up
+
+  // Initialize a counter to fill the array
+  int counter = 1;
+
+  // Keep running the loop until all elements are filled
+  while (counter <= rows * cols)
+  {
+    // Fill the current element with the counter value
+    arr[row, col] = counter;
+    counter++;
+
+    // Update the position based on the direction
+    if (direction == 0)  // moving right
+    {
+      col++;
+      if (col >= cols || arr[row, col] != 0)  // check if we reached the end of the row or if the element is already filled
+      {
+        col--;  // move back to the last element
+        row++;  // change direction to down
+        direction = 1;
+      }
+    }
+    else if (direction == 1)  // moving down
+    {
+      row++;
+      if (row >= rows || arr[row, col] != 0)  // check if we reached the last row or if the element is already filled
+      {
+        row--;  // move back to the last element
+        col--;  // change direction to left
+        direction = 2;
+      }
+    }
+    else if (direction == 2)  // moving left
+    {
+      col--;
+      if (col < 0 || arr[row, col] != 0)  // check if we reached the first column or if the element is already filled
+      {
+        col++;  // move back to the last element
+        row--;  // change direction to up
+        direction = 3;
+      }
+    }
+    else if (direction == 3)  // moving up
+    {
+      row--;
+      if (row < 0 || arr[row, col] != 0)  // check if we reached the first row or if the element is already filled
+      {
+        row++;  // move back to the last element
+        col++;  // change direction to right
+        direction = 0;
+      }
+    }
+  }
+}
+
+// Example usage
+int[,] arr = new int[3, 3];
+FillArraySpirally(arr);
+
+// Print the filled array
+for (int i = 0; i < arr.GetLength(0); i++)
+{
+  for (int j = 0; j < arr.GetLength(1); j++)
+  {
+    Console.Write(arr[i, j] + " ");
+  }
+  Console.WriteLine();
+}
+// prints:
+// 1 2 3
+// 8 9 4
+// 7 6 5
+

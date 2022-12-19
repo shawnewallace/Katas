@@ -1,15 +1,20 @@
 ﻿<Properties StartupConfiguration="{0666CBE1-0E03-4FF3-AD19-29DCA3748481}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/shawn/src/PERSONAL/Katas/spiral/SpiralTest/UnitTest1.cs" relfile="UnitTest1.cs" line="93" column="4" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="UnitTest1.cs">
     <Files>
-      <File FileName="UnitTest1.cs" Line="118" Column="1" />
+      <File FileName="UnitTest1.cs" Line="60" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SpiralTest" expanded="True">
             <Node name="SpiralTest" expanded="True">
-              <Node name="UnitTest1.cs" selected="True" />
+              <Node name="sew.txt" selected="True" />
             </Node>
           </Node>
         </State>
@@ -28,11 +33,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.SpiralTest PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/shawn/Desktop/katas/spiral/SpiralTest/UnitTest1.cs" relfile="UnitTest1.cs" line="34" column="3" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
